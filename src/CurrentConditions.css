@@ -1,0 +1,15 @@
+.CurrentConditions .currentIcon {
+  font-size: 68px;
+  line-height: 60px;
+  color: #ffa500;
+  display: inline;
+}
+
+.CurrentConditions .temperature {
+  font-size: 60px;
+}
+
+.CurrentConditions .units {
+  position: relative;
+  top: -30px;
+}

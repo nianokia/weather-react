@@ -1,0 +1,14 @@
+.Search form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Search .btn-search {
+  font-size: 16px;
+}
+
+.Search .search-box {
+  font-size: 18px;
+  border: 1px solid lightgray;
+  color: rgba(0, 0, 0, 0.6);
+}
