@@ -6,7 +6,7 @@ import "./CurrentConditions.css";
 export default function CurrentConditions(props) {
   return (
     <div className="CurrentConditions row">
-      <div className="col-6">
+      <div className="col-6 currentContainer">
         <p className="currentIcon">☀</p>
         <span className="temperature">{props.temperature}</span>
         <span className="units">
@@ -14,7 +14,7 @@ export default function CurrentConditions(props) {
         </span>
       </div>
       <div className="col-6">
-        <div className="CurrentConditions">
+        <div className="Conditions">
           <ul>
             <li>Wind: {props.wind} mph</li>
             <li>Humidity: {props.humidity}%</li>

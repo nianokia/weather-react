@@ -14,16 +14,22 @@ function App() {
   };
   return (
     <div className="App">
-      <Search />
-      <div className="heading">
-        <h1>{appData.city}</h1>
-        <p>
-          {appData.date} {appData.time}
-          {appData.ampm}
-        </p>
-        <p>{appData.description}</p>
+      <div className="appContainer">
+        <Search />
+        <div className="heading">
+          <h1>{appData.city}</h1>
+          <p>
+            {appData.date} {appData.time}
+            {appData.ampm}
+          </p>
+          <p>{appData.description}</p>
+        </div>
+        <Weather />
       </div>
-      <Weather />
+      <footer>
+        This app is open-sourced on{" "}
+        <a href="https://github.com/nianokia/weather-react">Github</a>.
+      </footer>
     </div>
   );
 }

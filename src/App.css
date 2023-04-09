@@ -3,6 +3,9 @@
   max-width: 768px;
   display: block;
   margin: 30px auto;
+}
+
+.App .appContainer {
   padding: 20px;
   border: 1px solid lightgray;
   color: #353535;
@@ -19,4 +22,8 @@
 .App p {
   margin: 0;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.App footer {
+  padding-top: 10px;
 }
