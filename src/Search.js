@@ -12,13 +12,14 @@ export default function Search() {
             <input
               className="search-box form-control"
               type="search"
-              value="Enter a city..."
+              placeholder="Enter a city..."
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
             <input
-              className="btn btn-warning btn-search form-control"
-              type="sumbit"
+              className="btn btn-warning btn-search form-control w-100"
+              type="submit"
               value="Search"
             />
           </div>

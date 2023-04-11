@@ -7,38 +7,38 @@ export default function Forecast() {
     <div className="Forecast">
       <div className="row">
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Thu</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Thu</h5>
             <p className="forecastIcon">☁</p>
-            <p className="cardText">65 °F</p>
+            <p className="card-text">65 °F</p>
           </div>
         </div>
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Fri</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Fri</h5>
             <p className="forecastIcon">🌦</p>
-            <p className="cardText">48 °F</p>
+            <p className="card-text">48 °F</p>
           </div>
         </div>
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Sat</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Sat</h5>
             <p className="forecastIcon">☀</p>
-            <p className="cardText">48 °F</p>
+            <p className="card-text">48 °F</p>
           </div>
         </div>
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Sun</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Sun</h5>
             <p className="forecastIcon">☁</p>
-            <p className="cardText">58 °F</p>
+            <p className="card-text">58 °F</p>
           </div>
         </div>
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Mon</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Mon</h5>
             <p className="forecastIcon">☁</p>
-            <p className="cardText">68 °F</p>
+            <p className="card-text">68 °F</p>
           </div>
         </div>
         <div className="col-2">
