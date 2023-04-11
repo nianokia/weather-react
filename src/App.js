@@ -27,8 +27,23 @@ export default function App() {
         <Weather />
       </div>
       <footer>
-        This app is open-sourced on{" "}
-        <a href="https://github.com/nianokia/weather-react">Github</a>.
+        This app was coded by{" "}
+        <a
+          href="https://niawright.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Nia Wright
+        </a>{" "}
+        is open-sourced on{" "}
+        <a
+          href="https://github.com/nianokia/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        .
       </footer>
     </div>
   );
