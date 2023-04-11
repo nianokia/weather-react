@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
 
-function App() {
+export default function App() {
   let appData = {
     city: "Atlanta",
     date: "Thursday",
@@ -33,5 +33,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
