@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="appContainer">
         <Search />
-        <Weather />
+        <Weather defaultCity="Atlanta" />
       </div>
       <footer>
         This app was coded by{" "}
