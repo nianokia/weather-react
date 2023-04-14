@@ -8,6 +8,7 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -20,9 +21,33 @@ export default function Weather(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                className="search-box form-control"
+                type="search"
+                placeholder="Enter a city..."
+                autoFocus="on"
+              />
+            </div>
+            <div className="col-3">
+              <input
+                className="btn btn-warning btn-search form-control w-100"
+                type="submit"
+                value="Search"
+              />
+            </div>
+          </div>
+        </form>
+
         <div className="heading">
           <h1>{weatherData.name}</h1>
           <p>
