@@ -8,6 +8,13 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
+
+  function search() {
+    const apiKey = "7fbc4204c23b04814101fc2bf335b695";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   function handleResponse(response) {
     setWeatherData({
@@ -17,12 +24,18 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -36,6 +49,7 @@ export default function Weather(props) {
                 type="search"
                 placeholder="Enter a city..."
                 autoFocus="on"
+                onChange={updateCity}
               />
             </div>
             <div className="col-3">
@@ -59,14 +73,14 @@ export default function Weather(props) {
           temperature={Math.round(weatherData.temperature)}
           wind={weatherData.wind}
           humidity={weatherData.humidity}
+          icon={weatherData.iconUrl}
+          description={weatherData.description}
         />
         <Forecast />
       </div>
     );
   } else {
-    const apiKey = "7fbc4204c23b04814101fc2bf335b695";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return <div>Loading...</div>;
   }
 }

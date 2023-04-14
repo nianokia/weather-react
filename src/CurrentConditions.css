@@ -3,10 +3,10 @@
 }
 
 .CurrentConditions .currentIcon {
-  font-size: 68px;
-  line-height: 60px;
-  color: #ffa500;
-  display: inline;
+  height: 75px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
 }
 
 .CurrentConditions .temperature {

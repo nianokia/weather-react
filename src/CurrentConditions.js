@@ -7,7 +7,7 @@ export default function CurrentConditions(props) {
   return (
     <div className="CurrentConditions row">
       <div className="col-6 currentContainer">
-        <p className="currentIcon">☀</p>
+        <img src={props.icon} className="currentIcon" alt={props.description} />
         <span className="temperature">{props.temperature}</span>
         <span className="units">
           <a href="/">°C</a> | <a href="/">°F</a>
