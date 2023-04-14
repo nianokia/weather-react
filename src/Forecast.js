@@ -42,10 +42,10 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col-2">
-          <div className="cardBody border fiveDayForecast">
-            <h5 className="cardTitle">Tue</h5>
+          <div className="card-body border fiveDayForecast">
+            <h5 className="card-title">Tue</h5>
             <p className="forecastIcon">🌦</p>
-            <p className="cardText">65 °F</p>
+            <p className="card-text">65 °F</p>
           </div>
         </div>
       </div>
