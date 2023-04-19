@@ -13,8 +13,8 @@ export default function WeatherTemp(props) {
     setUnit("fahr");
   }
 
-  function celsius() {
-    return ((props.fahr - 32) * 5) / 9;
+  function calculateCelsius() {
+    return Math.round(((props.fahr - 32) * 5) / 9);
   }
 
   if (unit === "fahr") {
@@ -32,7 +32,7 @@ export default function WeatherTemp(props) {
   } else {
     return (
       <span className="WeatherTemp">
-        <span className="temperature">{Math.round(celsius())}</span>
+        <span className="temperature">{calculateCelsius()}</span>
         <span className="units">
           °C |{" "}
           <a href="/" onClick={showFahr}>
