@@ -2,20 +2,17 @@
   margin-bottom: 20px;
 }
 
-.CurrentConditions .currentIcon {
-  height: 75px;
-  display: inline-block;
-  position: relative;
-  top: -15px;
-}
-
 .CurrentConditions .temperature {
   font-size: 60px;
+  position: relative;
+  top: -10px;
+  right: -12px;
 }
 
 .CurrentConditions .units {
   position: relative;
-  top: -30px;
+  top: -40px;
+  right: -12px;
   margin-left: 6px;
 }
 

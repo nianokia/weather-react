@@ -24,6 +24,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      icon: response.data.weather[0].icon,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
@@ -73,7 +74,8 @@ export default function Weather(props) {
           temperature={Math.round(weatherData.temperature)}
           wind={weatherData.wind}
           humidity={weatherData.humidity}
-          icon={weatherData.iconUrl}
+          icon={weatherData.icon}
+          iconUrl={weatherData.iconUrl}
           description={weatherData.description}
         />
         <Forecast />
