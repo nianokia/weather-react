@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemp from "./WeatherTemp";
 
 import "./CurrentConditions.css";
 
@@ -8,15 +9,8 @@ export default function CurrentConditions(props) {
   return (
     <div className="CurrentConditions row">
       <div className="col-6 currentContainer">
-        <WeatherIcon
-          code={props.icon}
-          alt={props.description}
-          className="currentIcon"
-        />
-        <span className="temperature">{props.temperature}</span>
-        <span className="units">
-          <a href="/">°C</a> | <a href="/">°F</a>
-        </span>
+        <WeatherIcon code={props.icon} alt={props.description} />
+        <WeatherTemp fahr={props.temperature} />
       </div>
       <div className="col-6">
         <div className="Conditions">
