@@ -27,6 +27,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
     });
   }
 
@@ -65,9 +66,9 @@ export default function Weather(props) {
 
         <div className="heading">
           <h1>{weatherData.name}</h1>
-          <p>
+          <div>
             <FormattedDate date={weatherData.date} />
-          </p>
+          </div>
           <p className="text-capitalize">{weatherData.description}</p>
         </div>
         <CurrentConditions
@@ -78,7 +79,7 @@ export default function Weather(props) {
           iconUrl={weatherData.iconUrl}
           description={weatherData.description}
         />
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
