@@ -56,7 +56,7 @@ export default function Weather(props) {
             </div>
             <div className="col-3">
               <input
-                className="btn btn-warning btn-search form-control w-100"
+                className="btn btn-search form-control w-100"
                 type="submit"
                 value="Search"
               />
@@ -66,10 +66,10 @@ export default function Weather(props) {
 
         <div className="heading">
           <h1>{weatherData.name}</h1>
-          <div>
+          <div className="headingBody">
             <FormattedDate date={weatherData.date} />
+            <p className="text-capitalize">{weatherData.description}</p>
           </div>
-          <p className="text-capitalize">{weatherData.description}</p>
         </div>
         <CurrentConditions
           temperature={Math.round(weatherData.temperature)}

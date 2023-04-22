@@ -9,7 +9,7 @@ export default function CurrentConditions(props) {
   return (
     <div className="CurrentConditions row">
       <div className="col-6 currentContainer">
-        <WeatherIcon code={props.icon} size={65} />
+        <WeatherIcon code={props.icon} size={85} />
         <WeatherTemp fahr={props.temperature} />
       </div>
       <div className="col-6">

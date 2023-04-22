@@ -1,14 +1,18 @@
 .Forecast .fiveDayForecast {
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .Forecast .ForecastDayName {
-  font-size: 17px;
-  margin-bottom: 6px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .Forecast .forecastTemperatures {
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: 8px;
 }
 
 .Forecast .forecastTemperatureMin {
