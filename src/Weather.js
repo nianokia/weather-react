@@ -27,8 +27,10 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
+      timezone: response.data.timezone,
       coordinates: response.data.coord,
     });
+    console.log(response.data.timezone);
   }
 
   function handleSubmit(event) {
@@ -67,7 +69,10 @@ export default function Weather(props) {
         <div className="heading">
           <h1>{weatherData.name}</h1>
           <div className="headingBody">
-            <FormattedDate date={weatherData.date} />
+            <FormattedDate
+              date={weatherData.date}
+              timezone={weatherData.timezone}
+            />
             <p className="text-capitalize">{weatherData.description}</p>
           </div>
         </div>
