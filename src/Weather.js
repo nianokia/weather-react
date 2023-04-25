@@ -30,7 +30,6 @@ export default function Weather(props) {
       timezone: response.data.timezone,
       coordinates: response.data.coord,
     });
-    console.log(response.data.timezone);
   }
 
   function handleSubmit(event) {
