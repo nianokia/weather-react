@@ -26,7 +26,7 @@
   top: 12px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .CurrentConditions {
     margin: -5px -10px 0px 6px;
   }

@@ -33,7 +33,7 @@
   color: #f95959;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .App .appContainer {
     max-width: 340px;
     margin: 15px auto;

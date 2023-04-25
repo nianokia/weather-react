@@ -38,7 +38,7 @@
   color: #e3e3e3;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .Weather .heading {
     margin-left: 12px;
   }

@@ -42,7 +42,7 @@ export default function Forecast(props) {
             }
           })}
         </div>
-        <div className="row sixDayForecast d-lg-none d-md-none d-sm-block">
+        <div className="row sixDayForecast d-lg-none d-md-none d-sm-flex">
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
               return (
