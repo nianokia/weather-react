@@ -16,12 +16,21 @@
 
 .CurrentConditions .WeatherTemp .units {
   position: relative;
-  top: -55px;
+  top: -50px;
   right: -20px;
   margin-left: 6px;
 }
 
+.CurrentConditions .Conditions {
+  position: relative;
+  top: 12px;
+}
+
 @media (max-width: 575px) {
+  .CurrentConditions {
+    margin: -5px -10px 0px 6px;
+  }
+
   .CurrentConditions .WeatherIcon {
     position: relative;
     left: -12px;
@@ -41,6 +50,6 @@
 
   .CurrentConditions .Conditions {
     position: relative;
-    top: 20px;
+    top: 12px;
   }
 }

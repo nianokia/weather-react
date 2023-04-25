@@ -19,3 +19,30 @@
   opacity: 0.6;
   margin-left: 5px;
 }
+
+@media (max-width: 575px) {
+  .Forecast .sixDayForecast {
+    margin: -50px 3px 0px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .Forecast .ForecastDay {
+    margin: 0 10px;
+  }
+
+  .Forecast .ForecastDayName {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .Forecast .forecastTemperatures {
+    font-size: 18px;
+    margin: 5px 0px 20px;
+  }
+
+  .Forecast .forecastTemperatureMin {
+    display: none;
+  }
+}

@@ -40,32 +40,45 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function cityLength() {
+    if (weatherData.name.length <= 10) {
+      return <h1>{weatherData.name}</h1>;
+    } else {
+      return <h1 className="cityLength">{weatherData.name}</h1>;
+    }
+  }
+
+  function form() {
+    return (
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-9">
+            <input
+              className="search-box form-control"
+              type="search"
+              placeholder="Enter a city..."
+              autoFocus="on"
+              onChange={updateCity}
+            />
+          </div>
+          <div className="col-3">
+            <input
+              className="btn btn-search form-control w-100"
+              type="submit"
+              value="→"
+            />
+          </div>
+        </div>
+      </form>
+    );
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                className="search-box form-control"
-                type="search"
-                placeholder="Enter a city..."
-                autoFocus="on"
-                onChange={updateCity}
-              />
-            </div>
-            <div className="col-3">
-              <input
-                className="btn btn-search form-control w-100"
-                type="submit"
-                value="Search"
-              />
-            </div>
-          </div>
-        </form>
-
+        {form()}
         <div className="heading">
-          <h1>{weatherData.name}</h1>
+          {cityLength()}
           <div className="headingBody">
             <FormattedDate timezone={weatherData.timezone} />
             <p className="text-capitalize">{weatherData.description}</p>

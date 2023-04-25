@@ -37,3 +37,35 @@
   background: #233142;
   color: #e3e3e3;
 }
+
+@media (max-width: 575px) {
+  .Weather .heading {
+    margin-left: 12px;
+  }
+
+  .Weather h1 {
+    font-size: 36px;
+  }
+
+  .Weather .cityLength {
+    font-size: 32px;
+    word-wrap: break-word;
+  }
+
+  .Weather .headingBody {
+    margin: 0px 0px 0px 2px;
+  }
+
+  .Weather form {
+    margin-bottom: 0px;
+  }
+
+  .Weather .search-box {
+    font-size: 14px;
+  }
+
+  .Weather .btn-search {
+    font-size: 22px;
+    padding: 0px;
+  }
+}
