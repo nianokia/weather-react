@@ -15,7 +15,7 @@ export default function CurrentConditions(props) {
       <div className="col-6">
         <div className="Conditions">
           <ul>
-            <li>Wind: {props.wind} mph</li>
+            <li>Wind: {Math.round(props.wind)} mph</li>
             <li>Humidity: {props.humidity}%</li>
           </ul>
         </div>

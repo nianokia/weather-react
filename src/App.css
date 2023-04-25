@@ -6,7 +6,7 @@
 
 .App .appContainer {
   display: block;
-  max-width: 768px;
+  max-width: 740px;
   margin: 40px auto;
 }
 
@@ -20,12 +20,32 @@
 }
 
 .App footer {
-  padding-top: 20px;
+  margin: 10px 50px 0 50px;
+  padding: 8px 0;
   text-align: center;
   color: #e3e3e3;
   letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .App a {
   color: #f95959;
+}
+
+@media (max-width: 575px) {
+  .App .appContainer {
+    max-width: 340px;
+    margin: 15px auto;
+  }
+
+  .App .appContainerContent {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .App footer {
+    padding: 8px 0;
+    margin: 5px 0;
+  }
 }
