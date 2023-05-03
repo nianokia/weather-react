@@ -38,7 +38,7 @@ export default function App() {
           >
             Nia Wright
           </a>{" "}
-          is open-sourced on{" "}
+          and is open-sourced on{" "}
           <a
             href="https://github.com/nianokia/weather-react"
             target="_blank"
