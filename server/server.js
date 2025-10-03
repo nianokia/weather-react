@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.static(clientDistPath));
 
 // Define your API routes
-app.get("/:splat*", (req, res) => {
+app.get("*", (req, res) => {
     // --- verify that all routes are given index.html to allow React to manage routing ---
     res.sendFile(path.join(clientDistPath, 'index.html'));
 });
