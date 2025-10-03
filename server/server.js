@@ -13,21 +13,23 @@ const PORT = process.env.PORT || 3444;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Define the path to the client's built files (client/dist)
+const clientDistPath = path.join(__dirname, '..', 'client', 'dist');
+
 // --------- DEFINE APP USES ---------
 app.use(cors());
 app.use(express.json());
 
 // --- direct server to use the compiled build files from React ---
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(clientDistPath));
 
 // Define your API routes
-app.get("/*", (req, res) => {
+app.get("/:splat*", (req, res) => {
     // --- verify that all routes are given index.html to allow React to manage routing ---
-    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
-
-    console.log('Welcome to Nia\'s Weather App.');
+    res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
-    console.log(`Weather App is running on ${process.env.DOMAIN}`)
+    console.log(`Welcome to Nia's Weather App.`);
+    console.log(`Server running on port ${PORT}`);
 })
