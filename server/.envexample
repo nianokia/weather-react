@@ -1,0 +1,5 @@
+// Replace everything between the {} with your variables and remove the {}
+
+// these port numbers are not the same
+DOMAIN="http://localhost:{yourPortNumber}"
+PORT={yourPortNumber}
