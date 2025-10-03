@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import ForecastDay from "./ForecastDay";
+import { useState, useEffect } from "react";
+import ForecastDay from "./ForecastDay.jsx";
 import axios from "axios";
 
 import "./Forecast.css";
@@ -14,14 +14,17 @@ export default function Forecast(props) {
 
   function handleResponse(response) {
     setForecast(response.data.daily);
+    console.log(`response.data.daily or list: ${JSON.stringify(response.data.daily)}`)
     setLoaded(true);
   }
 
   function load() {
-    let apiKey = "203fa770242fcd2b9555d832a88ea567";
-    let latitude = props.coordinates.lat;
-    let longitude = props.coordinates.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+    let apiKey = "9733a0bfob8d3b90ab42ae5a571ftfa4";
+    
+    let latitude = props.coordinates.latitude;
+    let longitude = props.coordinates.longitude;
+    
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
 
     axios.get(apiUrl).then(handleResponse);
   }

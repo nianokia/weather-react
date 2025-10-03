@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import WeatherIcon from "./WeatherIcon";
-import WeatherTemp from "./WeatherTemp";
+import WeatherIcon from "./WeatherIcon.jsx";
+import WeatherTemp from "./WeatherTemp.jsx";
 
 import "./CurrentConditions.css";
 

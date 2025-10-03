@@ -1,4 +1,4 @@
-import Weather from "./Weather";
+import Weather from "./Weather.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./App.css";
