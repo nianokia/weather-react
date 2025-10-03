@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Define your API routes
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
     // --- verify that all routes are given index.html to allow React to manage routing ---
     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 
