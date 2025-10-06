@@ -5,5 +5,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(() => {
   return {
     plugins: [react()],
+    server: {
+      proxy: {
+        '/api': {
+          target: process.env.DOMAIN,
+          changeOrigin: true,
+          secure: false,
+        }
+      }
+    }
   };
 });
