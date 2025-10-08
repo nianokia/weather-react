@@ -1,0 +1,2 @@
+<!-- Replace everything between the {} with your variables and remove the {} -->
+REACT_WEATHER_APIKEY={yourWeatherApiKey}
