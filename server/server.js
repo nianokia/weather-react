@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.static(clientDistPath));
 
 // Define your API routes
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     // --- verify that all routes are given index.html to allow React to manage routing ---
     res.sendFile(path.join(clientDistPath, 'index.html'));
 });
@@ -32,4 +32,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Welcome to Nia's Weather App.`);
     console.log(`Server running on port ${PORT}`);
+    console.log(`Open dev server: ${process.env.DOMAIN}`)
 })
